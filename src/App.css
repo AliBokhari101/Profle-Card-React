@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use full viewport height for better scaling */
+  background-color: #fff; /* White background color */
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%; /* Use percentage width to ensure responsiveness */
+  max-width: 500px; /* Maximum width */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #001f3f; /* Dark navy blue background color */
+}
+
+.dp {
+  width: 120px; /* Profile picture size */
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about,
+.interest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff; /* Text color for about and interest sections */
+}
+
+.about h2,
+.about h3,
+.about h4,
+.interest h2 {
+  margin-bottom: 10px;
+}
+
+.about h2 {
+  font-size: 22px; /* Adjusted font size for h2 */
+}
+
+.about h3 {
+  font-size: 18px; /* Adjusted font size for h3 */
+  color: orange; /* CyberSecurity Expert text in orange */
+}
+
+.about h4 {
+  font-size: 14px; /* Adjusted font size for h4 */
+}
+
+.about-para {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.5;
+  text-align: justify;
+  font-size: 12px; /* Adjusted font size for paragraph */
+  padding: 0 10px; /* Add some padding to avoid text touching the edges */
+}
+
+.interest ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interest li {
+  margin-bottom: 5px;
+  color: #fff; /* Text color for interest list items */
+}
+
+.social-links {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.social-links a {
+  margin: 0 8px; /* Slightly reduced space between social links */
+  color: #fff; /* Text color for social links */
+  transition: color 0.2s ease-in-out; /* Add transition for smooth hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links a:hover {
+  color: #ddd;
+}
+
+.email-btn,
+.linkedin-btn {
+  display: inline-block; /* Align buttons side by side */
+  background-color: #007bff; /* Base color for both buttons */
+  color: #fff;
+  padding: 8px 16px; /* Slightly smaller padding */
+  border: none;
+  border-radius: 5px;
+  margin-right: 8px; /* Space between buttons */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Add transition for smooth hover and transform effect */
+}
+
+.email-btn:hover,
+.linkedin-btn:hover {
+  background-color: #005cbf; /* Change background color on hover for both buttons */
+  transform: scale(1.05); /* Slightly smaller scale for buttons */
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+  margin-right: 0; /* Remove the margin-right for the last button */
 }
